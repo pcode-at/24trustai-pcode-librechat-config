@@ -49,4 +49,5 @@ endpoints:
         apiKey: "${AZURE_OPENAI_API_KEY}"
         baseURL: "${AZURE_OPENAI_BASEURL}"
         models:
-          gpt-4o: true
+          gpt-4o:
+            deploymentName: gpt-4o
