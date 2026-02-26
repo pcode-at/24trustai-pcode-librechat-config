@@ -1,4 +1,4 @@
-version: 1.2.1
+version: 1.3.4
 
 cache: false
 
@@ -10,14 +10,6 @@ interface:
     externalUrl: "https://librechat.ai/tos"
     openNewTab: true
 
-registration:
-  socialLogins:
-    - "discord"
-    - "facebook"
-    - "github"
-    - "google"
-    - "openid"
-
 mcpServers:
   Time:
     type: stdio
@@ -26,29 +18,29 @@ mcpServers:
       - mcp-server-time
     startup: false
 
-endpoints:
-  azureOpenAI:
-    titleConvo: true
-    titleMethod: "completion"
-    titleModel: "Mistral-Large-3"
-    summarize: false
-    groups:
-      # Mistral via Azure AI Foundry (Serverless, Deployment: Mistral-Large-3)
-      # AZURE_MISTRAL_BASEURL z. B.: https://<dein-projekt>.inference.ai.azure.com/openai/v1
-      - group: mistral-foundry
-        apiKey: "${AZURE_API_KEY}"
-        baseURL: "${AZURE_MISTRAL_BASEURL}"
-        serverless: true
-        # Azure AI Foundry/Mistral lehnt "user" im Request-Body ab (422 extra_forbidden)
-        dropParams: ["user"]
-        models:
-          Mistral-Large-3: true
-      # Azure OpenAI (GPT-4o) – instanceName = Name der Azure-OpenAI-Ressource
-      - group: pcode-azure-openai
-        apiKey: "${AZURE_API_KEY}"
-        instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
-        version: "2024-12-01-preview"
-        # Model-level configuration
-        models:
-          gpt-4o:
-            deploymentName: gpt-4o
+# endpoints:
+#   azureOpenAI:
+#     titleConvo: true
+#     titleMethod: "completion"
+#     titleModel: "Mistral-Large-3"
+#     summarize: false
+#     groups:
+#       # Mistral via Azure AI Foundry (Serverless, Deployment: Mistral-Large-3)
+#       # AZURE_MISTRAL_BASEURL z. B.: https://<dein-projekt>.inference.ai.azure.com/openai/v1
+#       - group: mistral-foundry
+#         apiKey: "${AZURE_API_KEY}"
+#         baseURL: "${AZURE_MISTRAL_BASEURL}"
+#         serverless: true
+#         # Azure AI Foundry/Mistral lehnt "user" im Request-Body ab (422 extra_forbidden)
+#         dropParams: ["user"]
+#         models:
+#           Mistral-Large-3: true
+#       # Azure OpenAI (GPT-4o) – instanceName = Name der Azure-OpenAI-Ressource
+#       - group: pcode-azure-openai
+#         apiKey: "${AZURE_API_KEY}"
+#         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
+#         version: "2024-12-01-preview"
+#         # Model-level configuration
+#         models:
+#           gpt-4o:
+#             deploymentName: gpt-4o
