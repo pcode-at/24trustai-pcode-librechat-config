@@ -1,6 +1,6 @@
 version: 1.2.1
 
-cache: true
+cache: false
 
 interface:
   privacyPolicy:
@@ -48,6 +48,7 @@ endpoints:
         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
         apiKey: "${AZURE_OPENAI_API_KEY}"
         baseURL: "${AZURE_OPENAI_BASEURL}"
+        serverless: true
         models:
           gpt-4o:
             deploymentName: gpt-4o
