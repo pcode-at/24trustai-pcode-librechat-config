@@ -52,4 +52,3 @@ endpoints:
         models:
           gpt-4o:
             deploymentName: gpt-4o
-            version: "2024-11-20"
