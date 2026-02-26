@@ -48,7 +48,6 @@ endpoints:
         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
         apiKey: "${AZURE_API_KEY}"
         baseURL: "${AZURE_OPENAI_BASEURL}"
-        serverless: true
         models:
           gpt-4o:
             deploymentName: gpt-4o
