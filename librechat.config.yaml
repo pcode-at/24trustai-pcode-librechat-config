@@ -43,8 +43,9 @@ endpoints:
         dropParams: ["user"]
         models:
           Mistral-Large-3: true
-      # Azure OpenAI (GPT-4o)
+      # Azure OpenAI (GPT-4o) – instanceName = Name der Azure-OpenAI-Ressource
       - group: azure-openai
+        instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
         apiKey: "${AZURE_OPENAI_API_KEY}"
         baseURL: "${AZURE_OPENAI_BASEURL}"
         models:
