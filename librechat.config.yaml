@@ -46,7 +46,7 @@ endpoints:
       # Azure OpenAI (GPT-4o) – instanceName = Name der Azure-OpenAI-Ressource
       - group: azure-openai
         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
-        apiKey: "${AZURE_OPENAI_API_KEY}"
+        apiKey: "${AZURE_API_KEY}"
         baseURL: "${AZURE_OPENAI_BASEURL}"
         serverless: true
         models:
