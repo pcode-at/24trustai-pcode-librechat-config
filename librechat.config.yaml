@@ -45,7 +45,7 @@ endpoints:
           Mistral-Large-3: true
       # Azure OpenAI (GPT-4o) – instanceName = Name der Azure-OpenAI-Ressource
       - group: azure-openai
-        instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
+        # instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
         apiKey: "${AZURE_API_KEY}"
         baseURL: "${AZURE_OPENAI_BASEURL}"
         models:
