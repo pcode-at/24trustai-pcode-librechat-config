@@ -82,5 +82,5 @@ endpoints:
 
 mcpServers:
   Supabase:
-    type: sse
+    type: streamable-http
     url: "${SUPABASE_MCP_URL}"
