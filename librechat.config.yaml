@@ -79,3 +79,8 @@ endpoints:
       summarize: true
       summaryModel: "gpt-4o"
       modelDisplayLabel: "Azure Foundry"
+
+mcpServers:
+  Supabase:
+    type: sse
+    url: "${SUPABASE_MCP_URL}"
