@@ -59,9 +59,14 @@ endpoints:
         models:
           gpt-4o:
             deploymentName: gpt-4o
+            version: "2024-11-20"
+          gpt-5.1:
+            deploymentName: gpt-5.1
+            # version: "2025-05-01"
       - group: "azure-mistral"
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         baseURL: "${AZURE_MISTRAL_BASEURL}"
         serverless: true
+        dropParams: ["user"]
         models:
           Mistral-Large-3: true
