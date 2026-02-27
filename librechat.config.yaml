@@ -44,3 +44,24 @@ mcpServers:
 #         models:
 #           gpt-4o:
 #             deploymentName: gpt-4o
+
+endpoints:
+  azureOpenAI:
+    titleModel: "gpt-4o"
+    groups:
+      - group: "azure-gpt" # arbitrary name
+        apiKey: "${AZURE_FOUNDRY_API_KEY}"
+        instanceName: "${AZURE_OPENAI_INSTANCE_NAME}" # name of the resource group or instance
+        version: "2024-12-01-preview"
+        # baseURL: https://prod.example.com
+        # additionalHeaders:
+        #   X-Custom-Header: value
+        models:
+          gpt-4o:
+            deploymentName: gpt-4o
+      - group: "azure-mistral"
+        apiKey: "${AZURE_FOUNDRY_API_KEY}"
+        baseURL: "${AZURE_MISTRAL_BASEURL}"
+        serverless: true
+        models:
+          Mistral-Large-3: true
