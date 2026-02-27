@@ -61,13 +61,14 @@ endpoints:
       - group: "azure-gpt" # arbitrary name
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}" # name of the resource group or instance
-        version: "2024-03-01-preview"
+        version: "2024-12-01-preview"
         # baseURL: https://prod.example.com
         # additionalHeaders:
         #   X-Custom-Header: value
         models:
           gpt-4o:
             deploymentName: gpt-4o
+            default: true
           gpt-5.1:
             deploymentName: gpt-5.1
       - group: "azure-mistral"
