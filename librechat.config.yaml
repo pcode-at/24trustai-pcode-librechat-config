@@ -62,7 +62,7 @@ endpoints:
     titleConvo: true
     titleMethod: "completion"
     groups:
-      - group: "azure-gpt" # arbitrary name
+      - group: "rg-pcode-azure-ai-foundry" # arbitrary name
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}" # name of the resource group or instance
         # baseURL: https://prod.example.com
