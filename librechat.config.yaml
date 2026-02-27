@@ -48,6 +48,8 @@ mcpServers:
 endpoints:
   azureOpenAI:
     titleModel: "gpt-4o"
+    plugins: false
+    assistants: false
     groups:
       - group: "azure-gpt" # arbitrary name
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
