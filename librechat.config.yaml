@@ -71,11 +71,11 @@ endpoints:
         models:
           gpt-5.1:
             deploymentName: gpt-5.1-2
-            version: "2025-04-01-preview"
+            version: "2025-01-01-preview"
             default: true
           gpt-4o:
             deploymentName: gpt-4o
-            version: "2025-04-01-preview"
+            version: "2025-01-01-preview"
       - group: "azure-mistral"
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         baseURL: "${AZURE_MISTRAL_BASEURL}"
