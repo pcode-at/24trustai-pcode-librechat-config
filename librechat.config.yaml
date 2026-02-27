@@ -54,20 +54,24 @@ endpoints:
     allowedProviders:
       - "azureOpenAI"
   azureOpenAI:
-    titleModel: "gpt-5.1-2"
+    titleModel: "gpt-5.1"
     plugins: false
     assistants: false
+    summarize: false
+    summaryModel: "gpt-5.1"
+    titleConvo: true
+    titleMethod: "completion"
     groups:
       - group: "azure-gpt" # arbitrary name
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}" # name of the resource group or instance
-        version: "2024-05-01-preview"
         # baseURL: https://prod.example.com
         # additionalHeaders:
         #   X-Custom-Header: value
         models:
           gpt-5.1:
             deploymentName: gpt-5.1-2
+            version: "2024-05-01-preview"
             default: true
       - group: "azure-mistral"
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
