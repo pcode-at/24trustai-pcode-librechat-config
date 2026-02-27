@@ -59,13 +59,6 @@ endpoints:
     titleConvo: true
     titleMethod: "completion"
     groups:
-      - group: "rg-pcode-azure-ai-foundry" # arbitrary name
-        apiKey: "${AZURE_FOUNDRY_API_KEY}"
-        instanceName: "${AZURE_OPENAI_INSTANCE_NAME}" # name of the resource group or instance
-        models:
-          gpt-4o:
-            deploymentName: gpt-4o
-            version: "2025-01-01-preview"
       - group: "azure-mistral"
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         baseURL: "${AZURE_MISTRAL_BASEURL}"
@@ -73,3 +66,15 @@ endpoints:
         dropParams: ["user"]
         models:
           Mistral-Large-3: true
+  custom:
+    - name: "Azure Foundry GPT-4o"
+      apiKey: "${AZURE_FOUNDRY_API_KEY}"
+      baseURL: "${AZURE_FOUNDRY_BASEURL}" # z. B. https://<dein-projekt>.inference.ai.azure.com/openai/v1
+      models:
+        default:
+          - "gpt-4o"
+      titleConvo: true
+      titleModel: "current_model"
+      summarize: false
+      summaryModel: "current_model"
+      modelDisplayLabel: "Azure Foundry"
