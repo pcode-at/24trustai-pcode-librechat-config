@@ -81,6 +81,8 @@ endpoints:
       modelDisplayLabel: "Azure Foundry"
 
 mcpServers:
-  Supabase:
+  supabase:
     type: streamable-http
     url: "${SUPABASE_MCP_URL}"
+    requiresOAuth: true
+    serverInstructions: true
