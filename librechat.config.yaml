@@ -67,7 +67,7 @@ endpoints:
         models:
           Mistral-Large-3: true
   custom:
-    - name: "Azure Foundry GPTs"
+    - name: "Azure Sweden Foundry GPTs"
       apiKey: "${AZURE_FOUNDRY_API_KEY}"
       baseURL: "${AZURE_FOUNDRY_BASEURL}" # z. B. https://<dein-projekt>.inference.ai.azure.com/openai/v1
       models:
