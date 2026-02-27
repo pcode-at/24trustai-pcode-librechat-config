@@ -10,13 +10,13 @@ interface:
     externalUrl: "https://librechat.ai/tos"
     openNewTab: true
 
-mcpServers:
-  Time:
-    type: stdio
-    command: uvx
-    args:
-      - mcp-server-time
-    startup: false
+# mcpServers:
+#   Time:
+#     type: stdio
+#     command: uvx
+#     args:
+#       - mcp-server-time
+#     startup: false
 
 # endpoints:
 #   azureOpenAI:
@@ -54,17 +54,17 @@ endpoints:
       - group: "azure-gpt" # arbitrary name
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         instanceName: "${AZURE_OPENAI_INSTANCE_NAME}" # name of the resource group or instance
-        version: "2024-12-01-preview"
+        version: "2025-11-13"
         # baseURL: https://prod.example.com
         # additionalHeaders:
         #   X-Custom-Header: value
         models:
           gpt-4o:
             deploymentName: gpt-4o
-            version: "2024-11-20"
+            version: "2024-12-01-preview"
           gpt-5.1:
             deploymentName: gpt-5.1
-            # version: "2025-05-01"
+            version: "2024-12-01-preview"
       - group: "azure-mistral"
         apiKey: "${AZURE_FOUNDRY_API_KEY}"
         baseURL: "${AZURE_MISTRAL_BASEURL}"
