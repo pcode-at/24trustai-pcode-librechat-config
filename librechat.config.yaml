@@ -75,6 +75,6 @@ endpoints:
           - "gpt-4o"
       titleConvo: true
       titleModel: "current_model"
-      summarize: false
+      summarize: true
       summaryModel: "current_model"
       modelDisplayLabel: "Azure Foundry"
