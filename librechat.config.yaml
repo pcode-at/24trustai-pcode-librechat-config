@@ -46,6 +46,13 @@ interface:
 #             deploymentName: gpt-4o
 
 endpoints:
+  agents:
+    recursionLimit: 50
+    maxRecursionLimit: 100
+    disableBuilder: false
+    capabilities: ["tools"]
+    allowedProviders:
+      - "azureOpenAI"
   azureOpenAI:
     titleModel: "gpt-4o"
     plugins: false
