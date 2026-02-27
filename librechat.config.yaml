@@ -67,14 +67,15 @@ endpoints:
         models:
           Mistral-Large-3: true
   custom:
-    - name: "Azure Foundry GPT-4o"
+    - name: "Azure Foundry GPTs"
       apiKey: "${AZURE_FOUNDRY_API_KEY}"
       baseURL: "${AZURE_FOUNDRY_BASEURL}" # z. B. https://<dein-projekt>.inference.ai.azure.com/openai/v1
       models:
         default:
           - "gpt-4o"
+          - "gpt-5.1"
       titleConvo: true
-      titleModel: "current_model"
+      titleModel: "gpt-4o"
       summarize: true
-      summaryModel: "current_model"
+      summaryModel: "gpt-4o"
       modelDisplayLabel: "Azure Foundry"
