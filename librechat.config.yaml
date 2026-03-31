@@ -80,6 +80,20 @@ endpoints:
       summaryModel: "gpt-4o"
       modelDisplayLabel: "Azure Foundry"
 
+    - name: "EU Privacy LLMs"
+      apiKey: "${EU_PRIVACY_LLMS_API_KEY}"
+      baseURL: "${EU_PRIVACY_LLMS_BASEURL}"
+      models:
+        default:
+          - "qwen3.5-397b-a17b"
+      addParams:
+        preference: "balanced"
+      titleConvo: true
+      titleModel: "qwen3.5-397b-a17b"
+      summarize: true
+      summaryModel: "qwen3.5-397b-a17b"
+      modelDisplayLabel: "Qwen3.5"
+
 mcpServers:
   supabase:
     type: streamable-http
