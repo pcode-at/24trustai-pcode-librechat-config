@@ -1,0 +1,47 @@
+version: 1.3.4
+
+cache: false
+
+interface:
+  privacyPolicy:
+    externalUrl: "https://librechat.ai/privacy-policy"
+    openNewTab: true
+  termsOfService:
+    externalUrl: "https://librechat.ai/tos"
+    openNewTab: true
+
+endpoints:
+  agents:
+    recursionLimit: 50
+    maxRecursionLimit: 100
+    disableBuilder: false
+  azureOpenAI:
+    titleModel: "gpt-4o"
+    plugins: false
+    assistants: false
+    summarize: false
+    summaryModel: "gpt-4o"
+    titleConvo: true
+    titleMethod: "completion"
+    groups:
+      - group: "azure-mistral"
+        apiKey: "${AZURE_FOUNDRY_API_KEY}"
+        baseURL: "${AZURE_MISTRAL_BASEURL}"
+        serverless: true
+        dropParams: ["user"]
+        models:
+          Mistral-Large-3: true
+  custom:
+    - name: "EU Privacy LLMs"
+      apiKey: "${EU_PRIVACY_LLMS_API_KEY}"
+      baseURL: "${EU_PRIVACY_LLMS_BASEURL}"
+      models:
+        default:
+          - "qwen3.5-397b-a17b"
+      addParams:
+        preference: "balanced"
+      titleConvo: true
+      titleModel: "qwen3.5-397b-a17b"
+      summarize: true
+      summaryModel: "qwen3.5-397b-a17b"
+      modelDisplayLabel: "Qwen3.5"
