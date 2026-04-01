@@ -29,3 +29,17 @@ endpoints:
       summarize: true
       summaryModel: "qwen3.5-397b-a17b"
       modelDisplayLabel: "Qwen3.5"
+
+speech:
+  stt:
+    openai:
+      url: "${STT_BASE_URL}"
+      apiKey: "${STT_API_KEY}"
+      model: "${STT_MODEL}"
+  speechTab:
+    speechToText:
+      engineSTT: openai
+      languageSTT: "de-DE"
+      autoTranscribeAudio: false
+      decibelValue: -45
+      autoSendText: -1
