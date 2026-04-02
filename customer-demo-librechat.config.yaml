@@ -48,9 +48,9 @@ endpoints:
 speech:
   stt:
     openai:
-      url: "${STT_BASE_URL}"
+      url: "https://api.cortecs.ai/v1/audio/transcriptions"
       apiKey: "${STT_API_KEY}"
-      model: "${STT_MODEL}"
+      model: "whisper-large-v3"
   speechTab:
     speechToText:
       engineSTT: openai
