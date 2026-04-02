@@ -38,7 +38,7 @@ speech:
       model: "${STT_MODEL}"
   speechTab:
     speechToText:
-      engineSTT: external
+      engineSTT: openai
       languageSTT: "de-DE"
       autoTranscribeAudio: false
       decibelValue: -45
