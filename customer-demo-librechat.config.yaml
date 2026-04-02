@@ -45,12 +45,27 @@ endpoints:
 #       decibelValue: -45
 #       autoSendText: -1
 
+# speech:
+#   stt:
+#     openai:
+#       url: "https://api.cortecs.ai/v1/audio/transcriptions"
+#       apiKey: "${STT_API_KEY}"
+#       model: "whisper-large-v3"
+#   speechTab:
+#     speechToText:
+#       engineSTT: openai
+#       languageSTT: "de-DE"
+#       autoTranscribeAudio: false
+#       decibelValue: -45
+#       autoSendText: -1
+
+# mistral voxtral
 speech:
   stt:
     openai:
-      url: "https://api.cortecs.ai/v1/audio/transcriptions"
+      url: "https://api.mistral.ai/v1/audio/transcriptions"
       apiKey: "${STT_API_KEY}"
-      model: "whisper-large-v3"
+      model: "voxtral-mini-latest"
   speechTab:
     speechToText:
       engineSTT: openai
