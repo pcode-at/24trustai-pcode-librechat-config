@@ -30,16 +30,30 @@ endpoints:
       summaryModel: "qwen3.5-397b-a17b"
       modelDisplayLabel: "Qwen3.5"
 
+# speech:
+#   stt:
+#     azureOpenAI:
+#       instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
+#       apiKey: "${AZURE_OPENAI_API_KEY}"
+#       deploymentName: "${AZURE_OPENAI_WHISPER_DEPLOYMENT_NAME}"
+#       apiVersion: "2024-02-01"
+#   speechTab:
+#     speechToText:
+#       engineSTT: azureOpenAI
+#       languageSTT: "de-DE"
+#       autoTranscribeAudio: false
+#       decibelValue: -45
+#       autoSendText: -1
+
 speech:
   stt:
-    azureOpenAI:
-      instanceName: "${AZURE_OPENAI_INSTANCE_NAME}"
-      apiKey: "${AZURE_OPENAI_API_KEY}"
-      deploymentName: "${AZURE_OPENAI_WHISPER_DEPLOYMENT_NAME}"
-      apiVersion: "2024-02-01"
+    openai:
+      url: "${STT_BASE_URL}"
+      apiKey: "${STT_API_KEY}"
+      model: "${STT_MODEL}"
   speechTab:
     speechToText:
-      engineSTT: azureOpenAI
+      engineSTT: openai
       languageSTT: "de-DE"
       autoTranscribeAudio: false
       decibelValue: -45
