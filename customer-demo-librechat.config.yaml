@@ -68,7 +68,6 @@ speech:
       model: "voxtral-mini-latest"
   speechTab:
     speechToText:
-      engineSTT: external
       languageSTT: "de-DE"
       autoTranscribeAudio: false
       decibelValue: -45
