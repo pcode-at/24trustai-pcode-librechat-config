@@ -9,7 +9,19 @@ interface:
   termsOfService:
     externalUrl: "https://librechat.ai/tos"
     openNewTab: true
-
+    
+modelSpecs:
+  enforce: false      # true = User kann nichts anderes wählen
+  prioritize: true    # ModelSpec überschreibt zuletzt verwendete Auswahl
+  list:
+    - name: "crm-agent"
+      label: "CRM-Agent"
+      default: true                # ← macht es zum Default beim Login
+      description: "CRM-Agent"
+      preset:
+        endpoint: "agents"
+        agent_id: "agent_JAqmiKDwXl7dbngO9G7Yr"
+        
 endpoints:
   agents:
     recursionLimit: 50
